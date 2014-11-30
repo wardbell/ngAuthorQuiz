@@ -38,8 +38,8 @@
 	function AddGameForm($location, GameService){
 		var vm = this;
 		vm.game = {
-			author: {imageUrl: ''},
-			books:  ['','','',''],
+			imageUrl: '',
+			books:   ['','','',''],
 			checkAnswer: function(){return true;} // they're all good :-)
 		};
 		vm.submit = submit;

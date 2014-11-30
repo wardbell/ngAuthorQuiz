@@ -2,7 +2,7 @@
 	<h1>Add Game</h1>
 	<form ng-submit="vm.submit()">
 		<div class="form-group">
-			<input ng-model="vm.game.author.imageUrl" type="text" class="form-control" 
+			<input ng-model="vm.game.imageUrl" type="text" class="form-control" 
 				placeholder="Enter the url of the author's image"/>
 		</div>
 		<div ng-repeat="book in vm.game.books track by $index"  class="form-group">

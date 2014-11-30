@@ -18,7 +18,7 @@
 
 			var answer = books[_.random(books.length-1)];
 
-			var author =  _.find(data, 
+			var author = _.find(data, 
 				function(author){
 					return author.books.some(function (title){
 						return title === answer;
@@ -26,10 +26,10 @@
 			});
 
 			var game = {
-				author: author,				
+				imageUrl: author.imageUrl,				
 				books: books,
 				checkAnswer: function(title){
-					return game.author.books.some(function(t){
+					return author.books.some(function(t){
 						return t === title;
 					});
 				}
