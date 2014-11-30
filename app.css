@@ -1,0 +1,23 @@
+.answer {
+	border-left: 4px solid LightBlue;
+	background-color: rgb(230, 248, 254);
+	padding: 16px 15px;
+}
+.answer:hover{
+	background-color: LightBlue;
+}
+.authorimage {
+	height: 250px;
+	max-width: 180px;
+}
+.footer {
+	margin-top: 20px;
+}
+.pass {
+	background-color: Green;
+	height: 250px;
+}
+.fail {
+	background-color: Red;
+	height: 250px;
+}

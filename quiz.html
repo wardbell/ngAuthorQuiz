@@ -1,0 +1,40 @@
+<div ng-controller="Quiz as vm">
+
+	<div class="row" >
+		<div class="col-sm-3">
+			<img ng-src="{{vm.game.author.imageUrl}}" class="authorimage"/>
+		</div>
+
+		<div class="col-sm-8" >
+			<div ng-repeat="title in vm.game.books track by $index">
+				<h4 class="answer" ng-click="vm.selectAnswer(title)">{{title}}</h4>		
+				<!-- THIS WORKS TOO	
+			    <div ng-include="'book'"></div>				
+			    -->
+			</div>
+		</div>
+
+		<div class="col-sm-1 {{vm.correctness}}"></div>
+	</div>
+
+	<div ng-if="vm.showContinue" class="row">
+		<div class="col-sm-12">
+			<button ng-click="vm.nextGame()" class="btn btn-success btn-lg pull-right">Continue</button>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-12">
+			<button ng-click="vm.addGame()" class="btn">Add Game</button>
+		</div>
+	</div>
+
+</div>
+
+
+
+
+<!-- inline-templates -->
+<script type="text/ng-template" id="book">
+  <h4 class="answer" ng-click="vm.selectAnswer(title)">{{title}}</h4>
+</script>

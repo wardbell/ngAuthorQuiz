@@ -1,0 +1,14 @@
+<div class="col-sm-12">
+	<h1>Add Game</h1>
+	<form ng-submit="vm.submit()">
+		<div class="form-group">
+			<input ng-model="vm.game.author.imageUrl" type="text" class="form-control" 
+				placeholder="Enter the url of the author's image"/>
+		</div>
+		<div ng-repeat="book in vm.game.books track by $index"  class="form-group">
+			<input ng-model="vm.game.books[$index]" type="text" class="form-control" 
+				placeholder="Enter answer title {{$index+1}}"/>
+		</div>
+	<button type="submit" class="btn btn-default">Submit</button>
+	</form>
+</div>
