@@ -10,25 +10,29 @@
 
 	function Quiz($location, GameService) {
 		var vm = this;
-		nextGame();
+		genNextGame();
 
-		function nextGame(){
+		function genNextGame(){
 			vm.addGame      = addGame;
 			vm.game         = GameService.selectGame();
 			vm.correctness  = 'neutral';
 			vm.nextGame     = nextGame;
 			vm.selectAnswer = selectAnswer;
-			vm.showContinue = false;
+			vm.canContinue = false;
 		}
 
 		function addGame(){
 			$location.path('addGame');
 		}
 
+		function nextGame(){
+			if (vm.canContinue){ genNextGame(); }
+		}
+
 		function selectAnswer(title){
 			var isCorrect   = vm.game.checkAnswer(title);
 			vm.correctness  = isCorrect ? 'pass' : 'fail';
-			vm.showContinue = isCorrect;
+			vm.canContinue = isCorrect;
 		}
 	}
 

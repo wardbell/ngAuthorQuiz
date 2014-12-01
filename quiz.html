@@ -14,10 +14,10 @@
 			</div>
 		</div>
 
-		<div class="col-sm-1 {{vm.correctness}}"></div>
+		<div class="col-sm-1 {{vm.correctness}}" ng-click="vm.nextGame()"></div>
 	</div>
 
-	<div ng-if="vm.showContinue" class="row">
+	<div ng-if="vm.canContinue" class="row">
 		<div class="col-sm-12">
 			<button ng-click="vm.nextGame()" class="btn btn-success btn-lg pull-right">Continue</button>
 		</div>
