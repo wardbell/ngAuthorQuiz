@@ -18,7 +18,7 @@
 			vm.correctness  = 'neutral';
 			vm.nextGame     = nextGame;
 			vm.selectAnswer = selectAnswer;
-			vm.canContinue = false;
+			vm.canContinue  = false;
 		}
 
 		function addGame(){
@@ -32,7 +32,7 @@
 		function selectAnswer(title){
 			var isCorrect   = vm.game.checkAnswer(title);
 			vm.correctness  = isCorrect ? 'pass' : 'fail';
-			vm.canContinue = isCorrect;
+			vm.canContinue  = isCorrect;
 		}
 	}
 
